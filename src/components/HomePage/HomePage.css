@@ -1,0 +1,24 @@
+.homepage-main {
+  width: 100vw;
+  height: 100vh;
+}
+
+.hompage-left-container p {
+  margin: 0;
+  font-family: "Righteous", cursive;
+  font-size: var(--font-xxl);
+}
+
+.background-red {
+  width: 100%;
+  height: 100%;
+  color: var(--cream-60);
+  background-color: var(--red-100);
+}
+
+.background-cream {
+  width: 100%;
+  height: 100%;
+  color: var(--red-100);
+  background-color: var(--cream-60);
+}

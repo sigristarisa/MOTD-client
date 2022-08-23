@@ -1,10 +1,12 @@
 import React from "react";
+import HomePage from "./components/HomePage/HomePage";
+import "./index.css";
 
 const App: React.FC = () => {
   return (
-    <div className='App'>
-      <h1>Hi</h1>
-    </div>
+    <body className='App'>
+      <HomePage />
+    </body>
   );
 };
 
