@@ -6,12 +6,12 @@ import "./index.css";
 
 const App: React.FC = () => {
   return (
-    <body className='App'>
+    <div className='App'>
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/randomizer' element={<RandomizerPage />} />
       </Routes>
-    </body>
+    </div>
   );
 };
 

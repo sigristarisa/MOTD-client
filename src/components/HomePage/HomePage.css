@@ -28,7 +28,7 @@
 }
 
 .bg-red {
-  color: var(--cream-60);
+  color: var(--white);
   background-color: var(--red-100);
 }
 
@@ -39,6 +39,11 @@
 .bg-cream {
   color: var(--red-100);
   background-color: var(--cream-60);
+}
+
+.bg-white {
+  color: var(--red-100);
+  background-color: var(--white);
 }
 
 .hover-cream:hover {
