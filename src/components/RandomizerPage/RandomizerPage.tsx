@@ -1,7 +1,12 @@
 import React from "react";
+import Randomizer from "./Randomizer";
 
 const RandomizerPage: React.FC = () => {
-  return <div>hi</div>;
+  return (
+    <div>
+      <Randomizer />
+    </div>
+  );
 };
 
 export default RandomizerPage;
