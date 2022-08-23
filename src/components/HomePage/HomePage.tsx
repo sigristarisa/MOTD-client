@@ -9,7 +9,21 @@ const HomePage: React.FC = () => {
         <p className='background-red place-item_center'>T</p>
         <p className='background-cream place-item_center'>D</p>
       </aside>
-      <div className='hompage-right-container'></div>
+      <aside className='homepage-right-container'>
+        <h1 className='background-cream place-item_center'>
+          Mayonnaise Of The Day
+        </h1>
+        <div className='homepage-rightbottom-container four-grid-column'>
+          <div className='background-cream'></div>
+          <button className='background-red hover-red'>Start Trial</button>
+          <button className='background-cream hover-cream'>What's MOTD?</button>
+          <div className='background-red'></div>
+          <div className='background-red'></div>
+          <button className='background-cream hover-cream'>Login</button>
+          <button className='background-red hover-red'>Signup</button>
+          <div className='background-cream'></div>
+        </div>
+      </aside>
     </main>
   );
 };

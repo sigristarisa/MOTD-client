@@ -9,16 +9,38 @@
   font-size: var(--font-xxl);
 }
 
+.homepage-right-container h1 {
+  height: 50%;
+  margin: 0;
+  font-family: "Comfortaa", cursive;
+  font-size: var(--font-xl);
+}
+
+.homepage-rightbottom-container {
+  height: 50%;
+}
+
+.homepage-rightbottom-container button {
+  font-family: "Comfortaa", cursive;
+  font-size: var(--font-m);
+  font-weight: 700;
+  border: none;
+}
+
 .background-red {
-  width: 100%;
-  height: 100%;
   color: var(--cream-60);
   background-color: var(--red-100);
 }
 
+.hover-red:hover {
+  background-color: var(--red-60);
+}
+
 .background-cream {
-  width: 100%;
-  height: 100%;
   color: var(--red-100);
   background-color: var(--cream-60);
+}
+
+.hover-cream:hover {
+  background-color: var(--cream-100);
 }

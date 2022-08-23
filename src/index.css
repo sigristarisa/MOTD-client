@@ -31,9 +31,19 @@ body {
   padding: 0;
 }
 
+button {
+  cursor: pointer;
+}
+
+/* Layout*/
 .two-grid-column {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+}
+
+.four-grid-column {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .place-item_center {
