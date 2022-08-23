@@ -27,7 +27,7 @@
   border: none;
 }
 
-.background-red {
+.bg-red {
   color: var(--cream-60);
   background-color: var(--red-100);
 }
@@ -36,7 +36,7 @@
   background-color: var(--red-60);
 }
 
-.background-cream {
+.bg-cream {
   color: var(--red-100);
   background-color: var(--cream-60);
 }
