@@ -14,25 +14,25 @@ const HomePage: React.FC = () => {
   };
 
   return (
-    <main className='homepage-main place-items_center'>
-      <div className='place-items_center'>
+    <main className='homepage_main place-items_center'>
+      <div className='title_container place-items_center'>
         <h1>MOTD</h1>
         <h2>Mayonnaise Of The Day</h2>
       </div>
-      <img src={mayonnaiseLid} alt='mayonnaise lid' />
+      {isClicked && (
+        <OutsideClickHandler onOutsideClick={() => setIsClicked(false)}>
+          <button className='you-sure_btn' onClick={() => moveToRandomizer()}>
+            You sure?<br></br> It's only once a day
+          </button>
+        </OutsideClickHandler>
+      )}
       <button
         className='mix-my-day_btn'
         onClick={() => setIsClicked(!isClicked)}
       >
         Mix My Day!
       </button>
-      {isClicked && (
-        <OutsideClickHandler onOutsideClick={() => setIsClicked(false)}>
-          <button className='you-sure_btn' onClick={() => moveToRandomizer()}>
-            You sure? It's only once a day
-          </button>
-        </OutsideClickHandler>
-      )}
+      <img src={mayonnaiseLid} alt='mayonnaise lid' />
     </main>
   );
 };

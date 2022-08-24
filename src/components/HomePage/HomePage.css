@@ -1,27 +1,32 @@
-.homepage-main {
+.homepage_main {
   width: 100vw;
   height: 90vh;
   color: var(--red-100);
   background-color: var(--cream-60);
 }
 
-.homepage-main h1 {
+.title_container {
+  position: fixed;
+  left: 33vw;
+  top: 20vh;
+}
+
+.title_container h1 {
   margin: 0;
   font-family: "Righteous", cursive;
   font-size: var(--font-xl);
   letter-spacing: 0.05em;
 }
 
-.homepage-main h2 {
+.title_container h2 {
   margin: 0;
   font-family: "Comfortaa", cursive;
   font-size: var(--font-l);
 }
 
-.homepage-main img {
+.homepage_main img {
   width: 60vw;
   align-self: end;
-  position: relative;
 }
 
 .mix-my-day_btn {
@@ -35,9 +40,27 @@
   border: none;
   border-radius: 1vw;
   position: absolute;
-  bottom: 15vh;
+  bottom: 20vh;
 }
 
-.homepage-main button:hover {
+.mix-my-day_btn:hover {
   background-color: var(--cream-100);
+}
+
+.you-sure_btn {
+  width: 12vw;
+  height: 6vh;
+  font-family: "Comfortaa", cursive;
+  font-size: var(--font-s);
+  font-weight: 700;
+  color: var(--red-100);
+  background-color: var(--cream-100);
+  border: none;
+  border-radius: 1vw;
+  position: absolute;
+  bottom: 30vh;
+}
+
+.you-sure_btn:hover {
+  background-color: var(--cream-60);
 }
