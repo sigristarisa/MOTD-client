@@ -5,7 +5,6 @@
 }
 
 .mayonnaise-content_container {
-  border: 2px solid green;
   width: 240px;
   height: 240px;
 }
@@ -22,6 +21,17 @@
 }
 
 #spoon_img {
-  width: 20%;
+  width: 60%;
   transform: rotate(-45deg);
+}
+
+.dish-icon_container {
+  width: 24px;
+  height: 24px;
+  border: green 1px solid;
+}
+
+.dish-icon_container img {
+  max-width: 100%;
+  max-height: 100%;
 }

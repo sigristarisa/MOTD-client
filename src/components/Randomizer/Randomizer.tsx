@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import Ingredients from "./Ingredients";
+import GoesWellWith from "./GoesWellWith";
 import client from "../../helpers/client";
 import spoon from "../../assets/spoon.png";
 import "./Randomizer.css";
@@ -64,33 +66,14 @@ const Randomizer: React.FC = () => {
             alt={`${mayonnaise.name}`}
             className='mayonnaise_img'
           />
-          {showMayoContent && (
-            <div className='mayonnaise-text_container'>
-              <h2>{mayonnaise.name.toUpperCase()}</h2>
-              <img src={spoon} alt='spoon icon' id='spoon_img' />
-              <div>
-                <p>2 tbsp. mayonnaise</p>
-                <p>
-                  {mayonnaise.portion} {mayonnaise.ingredient}
-                </p>
-                <div>
-                  <p>Goes well with</p>
-                  <ul>
-                    {mayonnaise.combination.map((combination) => {
-                      return (
-                        <li>
-                          <img
-                            src={`http://localhost:4000${combination.dish.image}`}
-                            alt={`${combination.dish.name} icon`}
-                          />
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </div>
-              </div>
-            </div>
-          )}
+        </div>
+      )}
+      {mayonnaise && showMayoContent && (
+        <div className='mayonnaise-text_container four-grid-columns'>
+          <h2>{mayonnaise.name.toUpperCase()}</h2>
+          <img src={spoon} alt='spoon icon' id='spoon_img' />
+          <Ingredients mayonnaise={mayonnaise} />
+          <GoesWellWith mayonnaise={mayonnaise} />
         </div>
       )}
     </div>
