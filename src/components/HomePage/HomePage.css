@@ -7,11 +7,11 @@
 
 .title_container {
   width: 100vw;
-  height: 40vh;
+  height: 30vh;
 }
 
 .title_container h1 {
-  height: 15vh;
+  height: 24vh;
   margin: 0;
   font-family: "Righteous", cursive;
   font-size: var(--font-xl);
