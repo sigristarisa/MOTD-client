@@ -11,7 +11,7 @@ const App: React.FC = () => {
       <Header />
       <Routes>
         <Route path='/' element={<HomePage />} />
-        <Route path='/randomizer' element={<RandomizerPage />} />
+        <Route path='/todays-mayonnaise' element={<RandomizerPage />} />
       </Routes>
     </div>
   );

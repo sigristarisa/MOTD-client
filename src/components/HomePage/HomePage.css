@@ -1,4 +1,43 @@
 .homepage-main {
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
+  color: var(--red-100);
+  background-color: var(--cream-60);
+}
+
+.homepage-main h1 {
+  margin: 0;
+  font-family: "Righteous", cursive;
+  font-size: var(--font-xl);
+  letter-spacing: 0.05em;
+}
+
+.homepage-main h2 {
+  margin: 0;
+  font-family: "Comfortaa", cursive;
+  font-size: var(--font-l);
+}
+
+.homepage-main img {
+  width: 60vw;
+  align-self: end;
+  position: relative;
+}
+
+.homepage-main button {
+  width: 15vw;
+  height: 6vh;
+  font-family: "Comfortaa", cursive;
+  font-size: var(--font-m);
+  font-weight: 700;
+  color: var(--red-100);
+  background-color: var(--white);
+  border: none;
+  border-radius: 1vw;
+  position: absolute;
+  bottom: 15vh;
+}
+
+.homepage-main button:hover {
+  background-color: var(--cream-100);
 }

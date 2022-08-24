@@ -16,8 +16,7 @@ html {
   --font-s: 0.75vw;
   --font-m: 1.2vw;
   --font-l: 2vw;
-  --font-xl: 3vw;
-  --font-xxl: 20vw;
+  --font-xl: 12vw;
 }
 
 * {
@@ -40,10 +39,11 @@ button {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
-.align-items_center {
+
+/* .align-items_center {
   display: grid;
   align-items: center;
-}
+} */
 
 .place-items_center {
   display: grid;
