@@ -18,6 +18,7 @@ type Mayonnaise = {
   name: string;
   ingredient: string;
   portion: string;
+  image: string;
   combination: Combination[];
 };
 
@@ -51,7 +52,15 @@ const Randomizer: React.FC = () => {
 
   return (
     <div>
-      <p>{mayonnaise && mayonnaise.name}</p>
+      {mayonnaise && (
+        <div>
+          <img
+            src={`http://localhost:4000${mayonnaise.image}.png`}
+            alt={`${mayonnaise.name}`}
+          />
+          <p>{mayonnaise.image}</p>
+        </div>
+      )}
     </div>
   );
 };
