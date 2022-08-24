@@ -34,6 +34,11 @@ button {
   cursor: pointer;
 }
 
+ul {
+  padding: 0;
+  list-style: none;
+}
+
 /* Layout*/
 .three-grid-columns {
   display: grid;

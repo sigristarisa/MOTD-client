@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import client from "../../helpers/client";
+import spoon from "../../assets/spoon.png";
 import "./Randomizer.css";
 
 type Dish = {
   id: number;
   name: string;
+  image: string;
 };
 
 type Combination = {
@@ -48,6 +50,7 @@ const Randomizer: React.FC = () => {
 
   useEffect(() => {
     client.get(`/mayonnaise/${mayoId}`).then((res) => {
+      console.log(res.data.data);
       setMayonnaise(res.data.data);
     });
   }, [mayoId]);
@@ -62,8 +65,30 @@ const Randomizer: React.FC = () => {
             className='mayonnaise_img'
           />
           {showMayoContent && (
-            <div>
+            <div className='mayonnaise-text_container'>
               <h2>{mayonnaise.name.toUpperCase()}</h2>
+              <img src={spoon} alt='spoon icon' id='spoon_img' />
+              <div>
+                <p>2 tbsp. mayonnaise</p>
+                <p>
+                  {mayonnaise.portion} {mayonnaise.ingredient}
+                </p>
+                <div>
+                  <p>Goes well with</p>
+                  <ul>
+                    {mayonnaise.combination.map((combination) => {
+                      return (
+                        <li>
+                          <img
+                            src={`http://localhost:4000${combination.dish.image}`}
+                            alt={`${combination.dish.name} icon`}
+                          />
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              </div>
             </div>
           )}
         </div>
