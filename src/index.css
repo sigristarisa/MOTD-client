@@ -40,10 +40,15 @@ button {
   grid-template-columns: repeat(3, 1fr);
 }
 
-/* .align-items_center {
+.align-items_center {
   display: grid;
   align-items: center;
-} */
+}
+
+.justify-items_center {
+  display: grid;
+  justify-items: center;
+}
 
 .place-items_center {
   display: grid;

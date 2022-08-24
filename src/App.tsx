@@ -2,7 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
 import HomePage from "./components/HomePage/HomePage";
-import RandomizerPage from "./components/RandomizerPage/RandomizerPage";
+import RandomizerPage from "./components/Randomizer/RandomizerPage";
 import "./index.css";
 
 const App: React.FC = () => {

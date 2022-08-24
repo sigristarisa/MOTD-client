@@ -1,0 +1,40 @@
+.lid_container {
+  width: 100vw;
+  height: 50vh;
+}
+
+.mix-my-day_btn {
+  width: 15vw;
+  height: 6vh;
+  font-family: "Comfortaa", cursive;
+  font-size: var(--font-m);
+  font-weight: 700;
+  color: var(--red-100);
+  background-color: var(--white);
+  border: none;
+  border-radius: 1vw;
+  position: absolute;
+  bottom: 20vh;
+}
+
+.mix-my-day_btn:hover {
+  background-color: var(--cream-100);
+}
+
+.you-sure_btn {
+  width: 12vw;
+  height: 6vh;
+  font-family: "Comfortaa", cursive;
+  font-size: var(--font-s);
+  font-weight: 700;
+  color: var(--red-100);
+  background-color: var(--cream-100);
+  border: none;
+  border-radius: 1vw;
+  position: absolute;
+  bottom: 30vh;
+}
+
+.you-sure_btn:hover {
+  background-color: var(--cream-60);
+}

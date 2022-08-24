@@ -6,12 +6,12 @@
 }
 
 .title_container {
-  position: fixed;
-  left: 33vw;
-  top: 20vh;
+  width: 100vw;
+  height: 40vh;
 }
 
 .title_container h1 {
+  height: 15vh;
   margin: 0;
   font-family: "Righteous", cursive;
   font-size: var(--font-xl);
@@ -27,40 +27,4 @@
 .homepage_main img {
   width: 60vw;
   align-self: end;
-}
-
-.mix-my-day_btn {
-  width: 15vw;
-  height: 6vh;
-  font-family: "Comfortaa", cursive;
-  font-size: var(--font-m);
-  font-weight: 700;
-  color: var(--red-100);
-  background-color: var(--white);
-  border: none;
-  border-radius: 1vw;
-  position: absolute;
-  bottom: 20vh;
-}
-
-.mix-my-day_btn:hover {
-  background-color: var(--cream-100);
-}
-
-.you-sure_btn {
-  width: 12vw;
-  height: 6vh;
-  font-family: "Comfortaa", cursive;
-  font-size: var(--font-s);
-  font-weight: 700;
-  color: var(--red-100);
-  background-color: var(--cream-100);
-  border: none;
-  border-radius: 1vw;
-  position: absolute;
-  bottom: 30vh;
-}
-
-.you-sure_btn:hover {
-  background-color: var(--cream-60);
 }
