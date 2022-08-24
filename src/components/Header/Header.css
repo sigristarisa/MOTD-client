@@ -1,0 +1,17 @@
+header {
+  width: 100vw;
+  height: 10vh;
+  background-color: var(--cream-60);
+}
+
+nav {
+  gap: 4vw;
+}
+
+nav button {
+  font-family: "Comfortaa", cursive;
+  font-weight: 700;
+  color: var(--red-100);
+  background-color: transparent;
+  border: none;
+}

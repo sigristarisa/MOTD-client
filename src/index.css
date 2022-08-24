@@ -36,17 +36,16 @@ button {
 }
 
 /* Layout*/
-.two-grid-column {
+.three-grid-columns {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+}
+.align-items_center {
+  display: grid;
+  align-items: center;
 }
 
-.four-grid-column {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-}
-
-.place-item_center {
+.place-items_center {
   display: grid;
   place-items: center;
 }
