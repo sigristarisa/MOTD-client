@@ -1,6 +1,8 @@
 .title_container {
   width: 100vw;
   height: 30vh;
+  color: var(--red-100);
+  background-color: var(--cream-60);
 }
 
 .title_container h1 {

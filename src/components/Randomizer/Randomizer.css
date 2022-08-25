@@ -1,6 +1,8 @@
 .randomizer_container {
   width: 100vw;
   height: 60vh;
+  color: var(--red-100);
+  background-color: var(--cream-60);
 }
 
 .mayonnaise-img_container {
@@ -43,6 +45,7 @@
 .dish-icon_container {
   width: 40px;
   height: 40px;
+  padding-right: 2px;
 }
 
 .dish-icon_container img {
