@@ -52,7 +52,6 @@ const Randomizer: React.FC = () => {
 
   useEffect(() => {
     client.get(`/mayonnaise/${mayoId}`).then((res) => {
-      console.log(res.data.data);
       setMayonnaise(res.data.data);
     });
   }, [mayoId]);
@@ -71,7 +70,7 @@ const Randomizer: React.FC = () => {
       {mayonnaise && showMayoContent ? (
         <div className='mayonnaise-text_container four-grid-columns_custom place-items_center'>
           <h2 className='justify-items_end'>{mayonnaise.name.toUpperCase()}</h2>
-          <div className='spoon_container place-items_center'>
+          <div className='spoon_container justify-items_end'>
             <img src={spoon} alt='spoon icon' id='spoon_img' />
           </div>
           <Ingredients mayonnaise={mayonnaise} />

@@ -28,7 +28,7 @@ interface props {
 
 const Ingredients: React.FC<props> = ({ mayonnaise }) => {
   return (
-    <div className='ingredient_container'>
+    <div className='ingredient_container justify-items_start'>
       <p>2 tbsp. mayonnaise</p>
       <p>
         {mayonnaise.portion} {mayonnaise.ingredient}

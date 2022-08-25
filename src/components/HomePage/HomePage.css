@@ -5,25 +5,6 @@
   background-color: var(--cream-60);
 }
 
-.title_container {
-  width: 100vw;
-  height: 30vh;
-}
-
-.title_container h1 {
-  height: 24vh;
-  margin: 0;
-  font-family: "Righteous", cursive;
-  font-size: var(--font-xl);
-  letter-spacing: 0.05em;
-}
-
-.title_container h2 {
-  margin: 0;
-  font-family: "Comfortaa", cursive;
-  font-size: var(--font-l);
-}
-
 .homepage_main img {
   width: 60vw;
   align-self: end;

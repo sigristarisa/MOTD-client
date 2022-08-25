@@ -1,18 +1,16 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import OutsideClickHandler from "react-outside-click-handler";
 import mayonnaiseLid from "../../assets/mayonnaise-lid.png";
 import "./Lid.css";
 
-interface props {
-  setToRandomizer: React.Dispatch<boolean>;
-}
-
-const Lid: React.FC<props> = ({ setToRandomizer }) => {
+const Lid: React.FC = () => {
   const [isClicked, setIsClicked] = useState<boolean>(false);
+  const navigate = useNavigate();
 
   const moveToRandomizer = (): void => {
     setIsClicked(false);
-    setToRandomizer(true);
+    navigate("../todays-mayonnaise");
   };
 
   return (
