@@ -15,3 +15,7 @@ nav button {
   background-color: transparent;
   border: none;
 }
+
+.active {
+  background-color: red;
+}
