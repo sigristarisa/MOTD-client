@@ -49,6 +49,12 @@ p {
   grid-template-columns: 1.5fr 2fr;
 }
 
+.three-grid-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4vw;
+}
+
 .seven-grid-columns {
   display: grid;
   grid-template-columns: repeat(7, 1fr);

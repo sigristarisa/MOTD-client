@@ -27,7 +27,14 @@ type Mayonnaise = {
   combination: Combination[];
 };
 
-const Randomizer: React.FC = () => {
+interface props {
+  uuid: string;
+  cache: {
+    put: Function;
+  };
+}
+
+const Randomizer: React.FC<props> = ({ uuid, cache }) => {
   const [mayoId, setMayoId] = useState<number>();
   const [mayonnaise, setMayonnaise] = useState<Mayonnaise>();
   const [showMayoContent, setShowMayoContent] = useState<boolean>(false);
@@ -42,6 +49,8 @@ const Randomizer: React.FC = () => {
   };
 
   useEffect(() => {
+    cache.put(`uuid ${uuid}`, uuid, 86400000);
+
     const randomizeMayoId: ReturnType<typeof setInterval> = setInterval(
       getRandomMayoId,
       100

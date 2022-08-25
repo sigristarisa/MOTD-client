@@ -26,7 +26,7 @@ const Header: React.FC = () => {
   return (
     <header className='place-items_center'>
       <nav>
-        <ul className='three-grid-columns'>
+        <ul className='three-grid-columns place-items_center'>
           {buttonArr.map((btn: NavBtn, index: number) => (
             <li key={index} className={activateBtn(index)}>
               <button

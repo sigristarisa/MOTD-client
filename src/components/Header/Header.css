@@ -4,10 +4,6 @@ header {
   background-color: var(--cream-60);
 }
 
-nav {
-  gap: 4vw;
-}
-
 nav button {
   font-family: "Comfortaa", cursive;
   font-weight: 700;
@@ -17,5 +13,5 @@ nav button {
 }
 
 .active {
-  background-color: red;
+  border-bottom: var(--red-100) 2px solid;
 }
