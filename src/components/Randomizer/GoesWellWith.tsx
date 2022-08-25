@@ -27,9 +27,9 @@ interface props {
 
 const GoesWellWith: React.FC<props> = ({ mayonnaise }) => {
   return (
-    <div>
+    <div className='goes-well-with_container two-grid-columns_expand-two justify-items_start'>
       <p>Goes well with</p>
-      <ul>
+      <ul className='seven-grid-columns icon_container'>
         {mayonnaise.combination.map((combination, index) => {
           return (
             <li key={index} className='dish-icon_container'>

@@ -1,10 +1,9 @@
 .randomizer_container {
   width: 100vw;
   height: 60vh;
-  border: 2px solid blue;
 }
 
-.mayonnaise-content_container {
+.mayonnaise-img_container {
   width: 240px;
   height: 240px;
 }
@@ -14,21 +13,36 @@
   max-height: 100%;
 }
 
-.mayonnaise-content_container h2 {
+.mayonnaise-text_container,
+.spacing_container {
+  width: 70vw;
+  height: 20vh;
   font-family: "Comfortaa", cursive;
+}
+
+.mayonnaise-text_container h2 {
+  width: 100%;
+  margin: 0;
   font-size: var(--font-l);
   font-weight: 700;
 }
 
 #spoon_img {
-  width: 60%;
-  transform: rotate(-45deg);
+  width: 30%;
+}
+
+.ingredient_container p {
+  margin: var(--font-xxs);
+  font-size: var(--font-m);
+}
+
+.goes-well-with_container {
+  font-size: var(--font-m);
 }
 
 .dish-icon_container {
-  width: 24px;
-  height: 24px;
-  border: green 1px solid;
+  width: 40px;
+  height: 40px;
 }
 
 .dish-icon_container img {

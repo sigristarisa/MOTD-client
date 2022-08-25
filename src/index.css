@@ -39,20 +39,41 @@ ul {
   list-style: none;
 }
 
-/* Layout*/
-.four-grid-columns {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+p {
+  margin: 0;
 }
 
-.align-items_center {
+/* Layout*/
+.two-grid-columns_expand-two {
   display: grid;
+  grid-template-columns: 1.5fr 2fr;
+}
+
+.seven-grid-columns {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.four-grid-columns_custom {
+  display: grid;
+  grid-template-columns: 3fr 0.5fr 2fr 3fr;
+}
+
+.justify-items_start {
+  display: grid;
+  justify-items: start;
   align-items: center;
 }
 
 .justify-items_center {
   display: grid;
   justify-items: center;
+}
+
+.justify-items_end {
+  display: grid;
+  justify-items: end;
+  align-items: center;
 }
 
 .place-items_center {

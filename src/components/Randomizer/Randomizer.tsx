@@ -60,7 +60,7 @@ const Randomizer: React.FC = () => {
   return (
     <div className='randomizer_container place-items_center'>
       {mayonnaise && (
-        <div className='mayonnaise-content_container place-items_center'>
+        <div className='mayonnaise-img_container place-items_center'>
           <img
             src={`http://localhost:4000${mayonnaise.image}.png`}
             alt={`${mayonnaise.name}`}
@@ -68,13 +68,17 @@ const Randomizer: React.FC = () => {
           />
         </div>
       )}
-      {mayonnaise && showMayoContent && (
-        <div className='mayonnaise-text_container four-grid-columns'>
-          <h2>{mayonnaise.name.toUpperCase()}</h2>
-          <img src={spoon} alt='spoon icon' id='spoon_img' />
+      {mayonnaise && showMayoContent ? (
+        <div className='mayonnaise-text_container four-grid-columns_custom place-items_center'>
+          <h2 className='justify-items_end'>{mayonnaise.name.toUpperCase()}</h2>
+          <div className='spoon_container place-items_center'>
+            <img src={spoon} alt='spoon icon' id='spoon_img' />
+          </div>
           <Ingredients mayonnaise={mayonnaise} />
           <GoesWellWith mayonnaise={mayonnaise} />
         </div>
+      ) : (
+        <div className='spacing_container'></div>
       )}
     </div>
   );
