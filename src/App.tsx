@@ -17,8 +17,6 @@ const App: React.FC = () => {
     return btnId === index ? "active" : "";
   };
 
-  console.log("uuid in App", uuid);
-
   return (
     <div className='App'>
       <Header getBtnId={getBtnId} activateBtn={activateBtn} />

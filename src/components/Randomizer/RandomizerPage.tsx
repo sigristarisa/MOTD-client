@@ -11,8 +11,6 @@ interface props {
 }
 const RandomizerPage: React.FC<props> = ({ uuid, cache }) => {
   const hasAccessed = (): boolean => {
-    console.log("uuid in radnomizerPage", uuid);
-    console.log("whats get: ", cache.get(`uuid ${uuid}`));
     return cache.get(`uuid ${uuid}`) ? true : false;
   };
 
