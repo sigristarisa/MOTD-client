@@ -43,6 +43,18 @@ p {
   margin: 0;
 }
 
+.homepage_main {
+  width: 100vw;
+  height: 90vh;
+  color: var(--red-100);
+  background-color: var(--cream-60);
+}
+
+.homepage_main img {
+  width: 60vw;
+  align-self: end;
+}
+
 /* Layout*/
 .two-grid-columns_expand-two {
   display: grid;

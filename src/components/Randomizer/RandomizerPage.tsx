@@ -1,5 +1,5 @@
 import React from "react";
-import MainTitle from "../HomePage/MainTitle";
+import ComeBackAgain from "./ComeBackAgain";
 import Randomizer from "./Randomizer";
 
 interface props {
@@ -10,17 +10,18 @@ interface props {
   };
 }
 const RandomizerPage: React.FC<props> = ({ uuid, cache }) => {
-  console.log("can i get ", cache.get(`uuid ${uuid}`));
-  console.log("uuid ", uuid);
-
-  const check = (): boolean => {
-    return cache.get(`uuid ${uuid}`) === uuid;
+  const hasAccessed = (): boolean => {
+    return cache.get(`uuid ${uuid}`) ? true : false;
   };
+
   return (
-    <main>
-      <MainTitle />
-      {check() ? <div>HOPE</div> : <Randomizer uuid={uuid} cache={cache} />}
-    </main>
+    <div>
+      {hasAccessed() ? (
+        <ComeBackAgain />
+      ) : (
+        <Randomizer uuid={uuid} cache={cache} />
+      )}
+    </div>
   );
 };
 

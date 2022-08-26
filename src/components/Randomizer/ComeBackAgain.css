@@ -1,0 +1,11 @@
+.come-back-again_container {
+  width: 100vw;
+  height: 60vh;
+  color: var(--red-100);
+  background-color: var(--cream-60);
+  font-family: "Comfortaa", cursive;
+}
+
+.come-back-again_container img {
+  width: 30%;
+}
