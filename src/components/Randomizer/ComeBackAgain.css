@@ -6,6 +6,11 @@
   font-family: "Comfortaa", cursive;
 }
 
-.come-back-again_container img {
-  width: 30%;
+.mayo-image_container {
+  width: 240px;
+  height: 240px;
+}
+
+.mayo-image_container img {
+  max-width: 100%;
 }
