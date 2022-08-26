@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Routes, Route, useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
 import MainTitle from "./components/MainTitle/MainTitle";
 import Lid from "./components/HomePage/Lid";
@@ -8,15 +8,16 @@ import { v4 as uuidv4 } from "uuid";
 import "./index.css";
 
 const App: React.FC = () => {
-  const uuid = uuidv4();
   const cache = require("memory-cache");
-
   const [btnId, setBtnId] = useState<number>(0);
+  const [uuid] = useState<string>(uuidv4());
 
   const getBtnId = (btnId: number): void => setBtnId(btnId);
   const activateBtn = (index: number): string => {
     return btnId === index ? "active" : "";
   };
+
+  console.log("uuid in App", uuid);
 
   return (
     <div className='App'>

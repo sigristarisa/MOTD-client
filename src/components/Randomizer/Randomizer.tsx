@@ -49,6 +49,7 @@ const Randomizer: React.FC<props> = ({ uuid, cache }) => {
   };
 
   useEffect(() => {
+    console.log("uuid in randomizer:", uuid);
     cache.put(`uuid ${uuid}`, uuid, 86400000);
 
     const randomizeMayoId: ReturnType<typeof setInterval> = setInterval(
