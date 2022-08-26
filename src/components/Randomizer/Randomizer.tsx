@@ -56,7 +56,7 @@ const Randomizer: React.FC<props> = ({ uuid, cache }) => {
       100
     );
     setTimeout(() => clearInterval(randomizeMayoId), 4000);
-    setTimeout(() => setShowMayoContent(true), 4500);
+    setTimeout(() => setShowMayoContent(true), 5000);
   }, []);
 
   useEffect(() => {
