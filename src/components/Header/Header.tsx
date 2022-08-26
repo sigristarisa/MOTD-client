@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./Header.css";
 
@@ -8,20 +8,19 @@ type NavBtn = {
   btnContent: string;
 };
 
-const Header: React.FC = () => {
+interface props {
+  getBtnId: Function;
+  activateBtn: Function;
+}
+
+const Header: React.FC<props> = ({ getBtnId, activateBtn }) => {
   const navigate = useNavigate();
-  const [btnId, setBtnId] = useState<number>(0);
 
   const buttonArr: NavBtn[] = [
     { id: 0, navigate: "../", btnContent: "HOME" },
     { id: 1, navigate: "../about", btnContent: "ABOUT" },
     { id: 2, navigate: "../todays-mayonnaise", btnContent: "TODAY" },
   ];
-
-  const getBtnId = (btnId: number): void => setBtnId(btnId);
-  const activateBtn = (index: number): string => {
-    return btnId === index ? "active" : "";
-  };
 
   return (
     <header className='place-items_center'>

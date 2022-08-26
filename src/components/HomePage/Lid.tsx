@@ -4,12 +4,17 @@ import OutsideClickHandler from "react-outside-click-handler";
 import mayonnaiseLid from "../../assets/mayonnaise-lid.png";
 import "./Lid.css";
 
-const Lid: React.FC = () => {
+interface props {
+  getBtnId: Function;
+}
+
+const Lid: React.FC<props> = ({ getBtnId }) => {
   const [isClicked, setIsClicked] = useState<boolean>(false);
   const navigate = useNavigate();
 
   const moveToRandomizer = (): void => {
     setIsClicked(false);
+    getBtnId(2);
     navigate("../todays-mayonnaise");
   };
 

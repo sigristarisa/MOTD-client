@@ -1,5 +1,5 @@
-import React from "react";
-import { Routes, Route } from "react-router-dom";
+import React, { useState } from "react";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import Header from "./components/Header/Header";
 import MainTitle from "./components/MainTitle/MainTitle";
 import Lid from "./components/HomePage/Lid";
@@ -11,13 +11,20 @@ const App: React.FC = () => {
   const uuid = uuidv4();
   const cache = require("memory-cache");
 
+  const [btnId, setBtnId] = useState<number>(0);
+
+  const getBtnId = (btnId: number): void => setBtnId(btnId);
+  const activateBtn = (index: number): string => {
+    return btnId === index ? "active" : "";
+  };
+
   return (
     <div className='App'>
-      <Header />
+      <Header getBtnId={getBtnId} activateBtn={activateBtn} />
       <main className='homepage_main justify-items_center'>
         <MainTitle />
         <Routes>
-          <Route path='/' element={<Lid />} />
+          <Route path='/' element={<Lid getBtnId={getBtnId} />} />
           <Route
             path='/todays-mayonnaise'
             element={<RandomizerPage uuid={uuid} cache={cache} />}
