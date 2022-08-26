@@ -9,7 +9,7 @@ To showcase the potential of mayonnaise, MOTD - Mayonnaise Of The Day - was born
 
 
 ### Demo
-![](https://github.com/sigristarisa/motd-client/motd-demo.gif)
+![MOTD demo gif](https://github.com/sigristarisa/motd-client/blob/main/public/motd-demo.gif?raw=true)
 
 
 
