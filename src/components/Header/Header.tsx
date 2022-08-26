@@ -1,12 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { NavBtn } from "../../helpers/types";
 import "./Header.css";
-
-type NavBtn = {
-  id: number;
-  navigate: string;
-  btnContent: string;
-};
 
 interface props {
   getBtnId: Function;

@@ -3,29 +3,8 @@ import Ingredients from "./Ingredients";
 import GoesWellWith from "./GoesWellWith";
 import client from "../../helpers/client";
 import spoon from "../../assets/spoon.png";
+import { Mayonnaise } from "../../helpers/types";
 import "./Randomizer.css";
-
-type Dish = {
-  id: number;
-  name: string;
-  image: string;
-};
-
-type Combination = {
-  id: number;
-  mayonnaiseId: number;
-  dishId: number;
-  dish: Dish;
-};
-
-type Mayonnaise = {
-  id: number;
-  name: string;
-  ingredient: string;
-  portion: string;
-  image: string;
-  combination: Combination[];
-};
 
 interface props {
   uuid: string;

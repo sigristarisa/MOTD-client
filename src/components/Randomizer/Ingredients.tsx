@@ -1,26 +1,5 @@
 import React from "react";
-
-type Dish = {
-  id: number;
-  name: string;
-  image: string;
-};
-
-type Combination = {
-  id: number;
-  mayonnaiseId: number;
-  dishId: number;
-  dish: Dish;
-};
-
-type Mayonnaise = {
-  id: number;
-  name: string;
-  ingredient: string;
-  portion: string;
-  image: string;
-  combination: Combination[];
-};
+import { Mayonnaise } from "../../helpers/types";
 
 interface props {
   mayonnaise: Mayonnaise;
