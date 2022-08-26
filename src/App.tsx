@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
 import MainTitle from "./components/MainTitle/MainTitle";
 import Lid from "./components/HomePage/Lid";
+import AboutPage from "./components/About/AboutPage";
 import RandomizerPage from "./components/Randomizer/RandomizerPage";
 import { v4 as uuidv4 } from "uuid";
 import "./index.css";
@@ -24,6 +25,7 @@ const App: React.FC = () => {
         <MainTitle />
         <Routes>
           <Route path='/' element={<Lid getBtnId={getBtnId} />} />
+          <Route path='/about' element={<AboutPage />} />
           <Route
             path='/todays-mayonnaise'
             element={<RandomizerPage uuid={uuid} cache={cache} />}
