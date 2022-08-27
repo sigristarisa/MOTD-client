@@ -11,7 +11,7 @@ import "./index.css";
 const App: React.FC = () => {
   const cache = require("memory-cache");
   const [btnId, setBtnId] = useState<number>(0);
-  const [uuid] = useState<string>(uuidv4());
+  const [uuid, setUuid] = useState<string>(uuidv4());
 
   const getBtnId = (btnId: number): void => setBtnId(btnId);
   const activateBtn = (index: number): string => {
