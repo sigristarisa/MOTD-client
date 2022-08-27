@@ -1,5 +1,5 @@
 import axios from "axios";
-const host: string = "http://localhost:4000";
+const host = process.env.REACT_APP_API_URL;
 
 const client = {
   get: (path: string) => {
