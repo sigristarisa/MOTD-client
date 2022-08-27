@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
 import MainTitle from "./components/MainTitle/MainTitle";
-import Lid from "./components/HomePage/Lid";
+import Lid from "./components/Lid/Lid";
 import AboutPage from "./components/About/AboutPage";
 import RandomizerPage from "./components/Randomizer/RandomizerPage";
 import { v4 as uuidv4 } from "uuid";
