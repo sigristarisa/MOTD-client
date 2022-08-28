@@ -17,6 +17,7 @@ const Randomizer: React.FC<props> = ({ uuid, cache }) => {
   const [mayoId, setMayoId] = useState<number>();
   const [mayonnaise, setMayonnaise] = useState<Mayonnaise>();
   const [showMayoContent, setShowMayoContent] = useState<boolean>(false);
+  const host = process.env.REACT_APP_API_URL;
 
   const getRandomMayoId = (): void => {
     const maxMayoId = 100;
@@ -49,7 +50,7 @@ const Randomizer: React.FC<props> = ({ uuid, cache }) => {
       {mayonnaise && (
         <div className='mayonnaise-img_container place-items_center'>
           <img
-            src={`http://localhost:4000${mayonnaise.image}.png`}
+            src={`${host}${mayonnaise.image}.png`}
             alt={`${mayonnaise.name}`}
             className='mayonnaise_img'
           />
