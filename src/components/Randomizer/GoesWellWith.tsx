@@ -6,6 +6,8 @@ interface props {
 }
 
 const GoesWellWith: React.FC<props> = ({ mayonnaise }) => {
+  const host = process.env.REACT_APP_API_URL;
+
   return (
     <div className='goes-well-with_container two-grid-columns_expand-two justify-items_start'>
       <p>Goes well with</p>
@@ -14,7 +16,7 @@ const GoesWellWith: React.FC<props> = ({ mayonnaise }) => {
           return (
             <li key={index} className='dish-icon_container'>
               <img
-                src={`http://localhost:4000${combination.dish.image}`}
+                src={`${host}${combination.dish.image}`}
                 alt={`${combination.dish.name} icon`}
               />
             </li>
