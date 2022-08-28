@@ -6,7 +6,6 @@ const client = {
     const url = `${host}${path}`;
     const headers = {
       "Access-Control-Allow-Origin": `${host}`,
-      "Content-Type": "application/json",
     };
     return axios.get(url, { headers });
   },
