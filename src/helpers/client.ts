@@ -4,8 +4,10 @@ const host = process.env.REACT_APP_API_URL;
 const client = {
   get: (path: string) => {
     const url = `${host}${path}`;
-
-    return axios.get(url);
+    const headers = {
+      "Access-Control-Allow-Origin": `${host}`,
+    };
+    return axios.get(url, { headers });
   },
 };
 
