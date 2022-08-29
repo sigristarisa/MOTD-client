@@ -1,11 +1,15 @@
 import React from "react";
 import "./MainTitle.css";
 
-const MainTitle: React.FC = () => {
+interface props {
+  headerText: string;
+}
+
+const MainTitle: React.FC<props> = ({ headerText }) => {
   return (
     <div className='title_container place-items_center'>
       <h1>MOTD</h1>
-      <h2>Mayonnaise Of The Day</h2>
+      <h2>{headerText}</h2>
     </div>
   );
 };

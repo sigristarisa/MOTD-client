@@ -6,15 +6,26 @@ import "./Header.css";
 interface props {
   getBtnId: Function;
   activateBtn: Function;
+  setHeaderText: Function;
 }
 
-const Header: React.FC<props> = ({ getBtnId, activateBtn }) => {
+const Header: React.FC<props> = ({ getBtnId, activateBtn, setHeaderText }) => {
   const navigate = useNavigate();
 
   const buttonArr: NavBtn[] = [
-    { id: 0, navigate: "../", btnContent: "HOME" },
-    { id: 1, navigate: "../about", btnContent: "ABOUT" },
-    { id: 2, navigate: "../todays-mayonnaise", btnContent: "TODAY" },
+    {
+      id: 0,
+      navigate: "../",
+      btnContent: "HOME",
+      headerText: "Mayonnaise Of The Day",
+    },
+    { id: 1, navigate: "../about", btnContent: "ABOUT", headerText: null },
+    {
+      id: 2,
+      navigate: "../todays-mayonnaise",
+      btnContent: "TODAY",
+      headerText: "Your Mayonnaise Of The Day Is...",
+    },
   ];
 
   return (
@@ -26,6 +37,7 @@ const Header: React.FC<props> = ({ getBtnId, activateBtn }) => {
               <button
                 onClick={() => {
                   getBtnId(btn.id);
+                  setHeaderText(btn.headerText);
                   navigate(`${btn.navigate}`);
                 }}
               >

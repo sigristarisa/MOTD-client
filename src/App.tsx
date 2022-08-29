@@ -12,6 +12,7 @@ const App: React.FC = () => {
   const cache = require("memory-cache");
   const [btnId, setBtnId] = useState<number>(0);
   const [uuid] = useState<string>(uuidv4());
+  const [headerText, setHeaderText] = useState<string>("Mayonnaise Of The Day");
 
   const getBtnId = (btnId: number): void => setBtnId(btnId);
   const activateBtn = (index: number): string => {
@@ -20,11 +21,18 @@ const App: React.FC = () => {
 
   return (
     <div className='App'>
-      <Header getBtnId={getBtnId} activateBtn={activateBtn} />
+      <Header
+        getBtnId={getBtnId}
+        activateBtn={activateBtn}
+        setHeaderText={setHeaderText}
+      />
       <main className='homepage_main justify-items_center'>
-        <MainTitle />
+        <MainTitle headerText={headerText} />
         <Routes>
-          <Route path='/' element={<Lid getBtnId={getBtnId} />} />
+          <Route
+            path='/'
+            element={<Lid getBtnId={getBtnId} setHeaderText={setHeaderText} />}
+          />
           <Route path='/about' element={<AboutPage />} />
           <Route
             path='/todays-mayonnaise'

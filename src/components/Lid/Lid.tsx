@@ -6,15 +6,17 @@ import "./Lid.css";
 
 interface props {
   getBtnId: Function;
+  setHeaderText: Function;
 }
 
-const Lid: React.FC<props> = ({ getBtnId }) => {
+const Lid: React.FC<props> = ({ getBtnId, setHeaderText }) => {
   const [isClicked, setIsClicked] = useState<boolean>(false);
   const navigate = useNavigate();
 
   const moveToRandomizer = (): void => {
     setIsClicked(false);
     getBtnId(2);
+    setHeaderText("Your Mayonnaise Of The Day Is...");
     navigate("../todays-mayonnaise");
   };
 

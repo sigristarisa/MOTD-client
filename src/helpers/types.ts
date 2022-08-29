@@ -2,6 +2,7 @@ export type NavBtn = {
   id: number;
   navigate: string;
   btnContent: string;
+  headerText: string | null;
 };
 
 type Dish = {
