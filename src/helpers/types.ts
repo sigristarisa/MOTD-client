@@ -23,6 +23,5 @@ export type Mayonnaise = {
   name: string;
   ingredient: string;
   portion: string;
-  image: string;
   combination: Combination[];
 };
