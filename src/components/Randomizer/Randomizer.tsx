@@ -14,7 +14,7 @@ interface props {
 }
 
 const Randomizer: React.FC<props> = ({ uuid, cache }) => {
-  const [mayoId, setMayoId] = useState<number>();
+  const [mayoId, setMayoId] = useState<number>(1);
   const [mayonnaise, setMayonnaise] = useState<Mayonnaise>();
   const [showMayoContent, setShowMayoContent] = useState<boolean>(false);
   const host = process.env.REACT_APP_API_URL;
@@ -25,12 +25,12 @@ const Randomizer: React.FC<props> = ({ uuid, cache }) => {
     const randomMayoId: number = Math.floor(
       Math.random() * (maxMayoId - minMayoId) + minMayoId
     );
+    console.log(randomMayoId);
     setMayoId(randomMayoId);
   };
 
   useEffect(() => {
     cache.put(`uuid ${uuid}`, uuid, 86400000);
-
     const randomizeMayoId: ReturnType<typeof setInterval> = setInterval(
       getRandomMayoId,
       100
@@ -44,6 +44,8 @@ const Randomizer: React.FC<props> = ({ uuid, cache }) => {
       setMayonnaise(res.data.data);
     });
   }, [mayoId]);
+
+  console.log(mayonnaise);
 
   return (
     <div className='randomizer_container place-items_center'>
