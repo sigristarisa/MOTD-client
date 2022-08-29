@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./Randomizer.css";
 
 const ImageSlideShow: React.FC = () => {
   const [mayoImgId, setMayoImgId] = useState<number>(1);
@@ -22,10 +23,11 @@ const ImageSlideShow: React.FC = () => {
   }, []);
 
   return (
-    <div>
+    <div className='mayonnaise-img_container place-items_center'>
       <img
         src={require(`../../assets/mayo-image/image_mayonnaise${mayoImgId}.png`)}
         alt='mayo img'
+        className='mayonnaise_img'
       />
     </div>
   );

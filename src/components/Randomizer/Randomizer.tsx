@@ -24,13 +24,16 @@ const Randomizer: React.FC<props> = ({ uuid, cache }) => {
 
     return randomMayoId;
   };
+
   const [mayoId] = useState<number>(getRandomMayoId());
+  const [showMayonnaise, setShowMayonnaise] = useState<boolean>(false);
   const [mayonnaise, setMayonnaise] = useState<Mayonnaise>();
   const host = process.env.REACT_APP_API_URL;
 
   useEffect(() => {
     cache.put(`uuid ${uuid}`, uuid, 86400000);
 
+    setTimeout(() => setShowMayonnaise(true), 3200);
     setTimeout(() => {
       client.get(`/mayonnaise/${mayoId}`).then((res) => {
         setMayonnaise(res.data.data);
@@ -40,27 +43,26 @@ const Randomizer: React.FC<props> = ({ uuid, cache }) => {
 
   return (
     <div className='randomizer_container place-items_center'>
-      <ImageSlideShow />
-      {mayonnaise ? (
-        <div className='place-items_center'>
-          <div className='mayonnaise-img_container place-items_center'>
-            <img
-              src={`${host}${mayonnaise.image}.png`}
-              alt={`${mayonnaise.name}`}
-              className='mayonnaise_img'
-            />
-          </div>
+      {mayonnaise && showMayonnaise ? (
+        <div className='mayonnaise-img_container place-items_center'>
+          <img
+            src={`${host}${mayonnaise.image}.png`}
+            alt={`${mayonnaise.name}`}
+            className='mayonnaise_img'
+          />
+        </div>
+      ) : (
+        <ImageSlideShow />
+      )}
 
-          <div className='mayonnaise-text_container four-grid-columns_custom place-items_center'>
-            <h2 className='justify-items_end'>
-              {mayonnaise.name.toUpperCase()}
-            </h2>
-            <div className='spoon_container justify-items_end'>
-              <img src={spoon} alt='spoon icon' id='spoon_img' />
-            </div>
-            <Ingredients mayonnaise={mayonnaise} />
-            <GoesWellWith mayonnaise={mayonnaise} />
+      {mayonnaise ? (
+        <div className='mayonnaise-text_container four-grid-columns_custom place-items_center'>
+          <h2 className='justify-items_end'>{mayonnaise.name.toUpperCase()}</h2>
+          <div className='spoon_container justify-items_end'>
+            <img src={spoon} alt='spoon icon' id='spoon_img' />
           </div>
+          <Ingredients mayonnaise={mayonnaise} />
+          <GoesWellWith mayonnaise={mayonnaise} />
         </div>
       ) : (
         <div className='spacing_container'></div>
