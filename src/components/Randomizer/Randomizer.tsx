@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import ImageSlideShow from "./ImageSlideShow";
 import Ingredients from "./Ingredients";
 import GoesWellWith from "./GoesWellWith";
 import client from "../../helpers/client";
@@ -34,11 +35,12 @@ const Randomizer: React.FC<props> = ({ uuid, cache }) => {
       client.get(`/mayonnaise/${mayoId}`).then((res) => {
         setMayonnaise(res.data.data);
       });
-    }, 3000);
+    }, 4000);
   }, []);
 
   return (
     <div className='randomizer_container place-items_center'>
+      <ImageSlideShow />
       {mayonnaise ? (
         <div className='place-items_center'>
           <div className='mayonnaise-img_container place-items_center'>
