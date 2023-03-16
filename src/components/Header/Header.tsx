@@ -1,7 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { NavBtn } from "../../helpers/types";
-import "./Header.css";
 
 interface props {
   getBtnId: Function;
@@ -29,9 +28,9 @@ const Header: React.FC<props> = ({ getBtnId, activateBtn, setHeaderText }) => {
   ];
 
   return (
-    <header className='place-items_center'>
+    <header className="cream-100">
       <nav>
-        <ul className='three-grid-columns place-items_center'>
+        <ul className="three-grid-columns place-items_center">
           {buttonArr.map((btn: NavBtn, index: number) => (
             <li key={index} className={activateBtn(index)}>
               <button
@@ -39,8 +38,7 @@ const Header: React.FC<props> = ({ getBtnId, activateBtn, setHeaderText }) => {
                   getBtnId(btn.id);
                   setHeaderText(btn.headerText);
                   navigate(`${btn.navigate}`);
-                }}
-              >
+                }}>
                 {btn.btnContent}
               </button>
             </li>
