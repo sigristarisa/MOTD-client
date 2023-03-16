@@ -20,22 +20,22 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className='App'>
+    <div className="App w-screen h-screen m-0 p-0">
       <Header
         getBtnId={getBtnId}
         activateBtn={activateBtn}
         setHeaderText={setHeaderText}
       />
-      <main className='homepage_main justify-items_center'>
+      <main className="homepage_main justify-items_center">
         <MainTitle headerText={headerText} />
         <Routes>
           <Route
-            path='/'
+            path="/"
             element={<Lid getBtnId={getBtnId} setHeaderText={setHeaderText} />}
           />
-          <Route path='/about' element={<AboutPage />} />
+          <Route path="/about" element={<AboutPage />} />
           <Route
-            path='/todays-mayonnaise'
+            path="/todays-mayonnaise"
             element={<RandomizerPage uuid={uuid} cache={cache} />}
           />
         </Routes>

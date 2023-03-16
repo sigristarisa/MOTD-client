@@ -28,12 +28,13 @@ const Header: React.FC<props> = ({ getBtnId, activateBtn, setHeaderText }) => {
   ];
 
   return (
-    <header className="cream-100">
+    <header className="w-screen h-20 bg-cream-60 text-red-100 border-2 border-black border-solid">
       <nav>
-        <ul className="three-grid-columns place-items_center">
+        <ul className="grid grid-cols-3 place-items-center">
           {buttonArr.map((btn: NavBtn, index: number) => (
             <li key={index} className={activateBtn(index)}>
               <button
+                className="border-2 border-black border-solid"
                 onClick={() => {
                   getBtnId(btn.id);
                   setHeaderText(btn.headerText);
