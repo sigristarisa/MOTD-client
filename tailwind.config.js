@@ -9,6 +9,10 @@ module.exports = {
       "cream-60": "#fffade",
       white: "#ffffff",
     },
+    fontFamily: {
+      righteous: ["Righteous", "cursive"],
+      comfortaa: ["Comfortaa", "cursive"],
+    },
   },
   plugins: [],
 };

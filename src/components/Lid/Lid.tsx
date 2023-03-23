@@ -21,21 +21,22 @@ const Lid: React.FC<props> = ({ getBtnId, setHeaderText }) => {
   };
 
   return (
-    <div className='lid_container justify-items_center'>
+    <div className="w-screen h-3/4 bg-cream-60 grid justify-items-center">
       {isClicked && (
         <OutsideClickHandler onOutsideClick={() => setIsClicked(false)}>
-          <button className='you-sure_btn' onClick={() => moveToRandomizer()}>
+          <button
+            className="w-44 h-14 font-comfortaa text-red-100 bg-cream-100 border-non rounded-lg absolute bottom-1/3 hover:bg-cream-60"
+            onClick={() => moveToRandomizer()}>
             You sure?<br></br> It's only once a day
           </button>
         </OutsideClickHandler>
       )}
       <button
-        className='mix-my-day_btn'
-        onClick={() => setIsClicked(!isClicked)}
-      >
+        className="w-48 h-14 font-comfortaa text-red-100 bg-white border-none rounded-lg absolute bottom-1/4 hover:bg-cream-100"
+        onClick={() => setIsClicked(!isClicked)}>
         Mix My Day!
       </button>
-      <img src={mayonnaiseLid} alt='mayonnaise lid' />
+      <img className="self-end" src={mayonnaiseLid} alt="mayonnaise lid" />
     </div>
   );
 };

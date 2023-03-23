@@ -26,7 +26,7 @@ const App: React.FC = () => {
         activateBtn={activateBtn}
         setHeaderText={setHeaderText}
       />
-      <main className="homepage_main justify-items_center">
+      <main className="w-screen h-4/5 border-red">
         <MainTitle headerText={headerText} />
         <Routes>
           <Route

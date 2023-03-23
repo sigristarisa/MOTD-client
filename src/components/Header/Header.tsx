@@ -28,9 +28,9 @@ const Header: React.FC<props> = ({ getBtnId, activateBtn, setHeaderText }) => {
   ];
 
   return (
-    <header className="w-screen h-20 bg-cream-60 text-red-100">
-      <nav className="h-full grid items-center">
-        <ul className="h-full grid grid-cols-3 place-items-center">
+    <header className="w-screen h-1/5 font-comfortaa bg-cream-60 text-red-100">
+      <nav className="h-full grid place-items-center">
+        <ul className="w-1/2 grid grid-cols-3 place-items-center">
           {buttonArr.map((btn: NavBtn, index: number) => (
             <li key={index} className={activateBtn(index)}>
               <button
