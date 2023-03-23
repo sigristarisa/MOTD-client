@@ -3,12 +3,12 @@ import "./AboutPage.css";
 
 const AboutPage: React.FC = () => {
   return (
-    <div className='about-page_container place-items_center'>
-      <h2>
+    <div className="w-screen h-3/4 text-red-100 bg-cream-60 font-comfortaa grid place-items-center">
+      <h2 className="text-4xl leading-relaxed">
         By the Mayo-Lover,<br></br> For the Mayo-Lover, <br></br>Of the
         Mayo-Lover.
       </h2>
-      <div className='about-page-text_container'>
+      <div className="w-screen grid text-center text-xl leading-loose">
         <p>
           You might go along with a little bit of mayonnaise on toast,<br></br>{" "}
           but are you ready for mayonnaise on your rice,<br></br> your steamed
@@ -24,8 +24,8 @@ const AboutPage: React.FC = () => {
           prevent your mayo-addiction.
         </p>
       </div>
-      <p className='creator-text'>
-        creator: <a href='https://github.com/sigristarisa'>Arisa Sigrist</a>
+      <p className="text-sm text-red-100 hover:text-red-60">
+        creator: <a href="https://github.com/sigristarisa">Arisa Sigrist</a>
       </p>
     </div>
   );

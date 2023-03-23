@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import OutsideClickHandler from "react-outside-click-handler";
 import mayonnaiseLid from "../../assets/mayonnaise-lid.png";
-import "./Lid.css";
 
 interface props {
   getBtnId: Function;
